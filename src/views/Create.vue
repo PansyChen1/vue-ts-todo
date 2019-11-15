@@ -9,7 +9,8 @@
     <!--任务名称-->
     <section>
       <van-cell-group>
-        <van-field input-align="center" placeholder="Please input task name" />
+        <van-field input-align="center" v-model="inputChName" />
+        <p>{{ inputChName }}</p>
       </van-cell-group>
     </section>
     <!--备选图案-->
@@ -52,6 +53,9 @@ import { config } from "../config";
 export default class Create extends Vue {
   private iconSetting: string[] = config.iconSetting;
   private colorSetting: string[] = config.colorSetting;
+  data: {
+    inputChName: "";
+  };
 }
 </script>
 
